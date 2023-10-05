@@ -1,11 +1,11 @@
 {
     "ESP32": {
-        "files": ["boot_app0.bin", "bootloader_dout_80m.bin", "esp32.bin", "esp32.partitions.bin"],
+        "files": ["boot_app0.bin", "bootloader_dout_80m.bin", "esp32-v4.1.bin", "esp32.partitions.bin"],
         "command": "--chip esp32 --port @COM --baud 921600 --before default_reset --after hard_reset write_flash -z --flash_mode dout --flash_freq 80m --flash_size detect 0xe000 @FILE0 0x1000 @FILE1 0x10000 @FILE2 0x8000 @FILE3",
         "discription": "For ESP32 38 pins\n\nPin Info:\n  RELAY: PIN 12\n  SETUP: PIN 4\n  COIN-IN: PIN 13\n  INSERT-LED: PIN 5\n  POWER-LED: PIN 18"
     },
 	"ESP8266": {
-        "files": ["esp2866.bin"],
+        "files": ["esp2866-v4.1.bin"],
         "command": "--chip esp8266 --port @COM --baud 115200 --before default_reset --after hard_reset write_flash 0x0 @FILE0",
         "discription": "For ESP8288, WEMOS\n\nPin Info:\n  Relay: PIN D5\n  Coin-in: PIN D6\n  Insert-led: PIN D3\n  Power-Led: PIN D4"
     },
